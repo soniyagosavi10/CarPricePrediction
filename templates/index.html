@@ -7,30 +7,33 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style = "background: url(https://i.pinimg.com/originals/67/42/42/674242f3b7318c723ca777b8f79bbeae.jpg); background-size: 100% 100%; ddddddddd; font-style: italic">
+
 
     <div style="color:white">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
-            <h3>Year</h3>
+            <center>
+            <h1> Used Car Price Estimation</h1>
+            </center>
+            <h3>Year Purhased</h3>
             <input id="first" name="Year" type="number ">
-            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type" id="fuel" required="required">
+            <h3>Showroom Price For Car(In lakhs)</h3><input id="second" name="Present_Price" required="required">
+            <h3>Kilometers Drived</h3><input id="third" name="Kms_Driven" required="required">
+            <h3>Previous Owners(0 or 1 or 3)</h3><input id="fourth" name="Owner" required="required">
+            <h3>Fuel Type</h3><select name="Fuel_Type" id="fuel" required="required">
                 <option value="2">Petrol</option>
                 <option value="1">Diesel</option>
                 <option value="0">CNG</option>
             </select>
-            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type" id="resea" required="required">
+            <h3>Seller Type</h3><select name="Seller_Type" id="resea" required="required">
                 <option value="0">Dealer</option>
                 <option value="1">Individual</option>
             </select>
-            <h3>Transmission type</h3><br><select name="Transmission" id="research" required="required">
+            <h3 style="color:black;">Transmission type</h3><select name="Transmission" id="research" required="required">
                 <option value="1">Manual Transmission</option>
                 <option value="0">Automatic Transmission</option>
             </select>
-            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br><br><button id="sub" type="submit ">Calculate Selling Price</button>
             <br>
 
 
@@ -40,7 +43,7 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><h3>{{ prediction_text }}<h3>
         <p>© Soniya Nanagir Gosavi 2021</p>
     </div>
 <br>
@@ -49,15 +52,19 @@
 
 
     <style>
-        body {
-            background-color: black;
+       body {
+            background-image: url('https://www.shutterstock.com/image-illustration/generic-black-sports-car-grunge-overlay-672142231');
+            background-repeat: no-repeat;
+            background-color: #a7dbe3;
+            color: white;
             text-align: center;
+            font-size:15px
             padding: 0px;
         }
         
         #research {
             font-size: 18px;
-            width: 100px;
+            width: 200px;
             height: 23px;
             top: 23px;
         }
@@ -78,6 +85,7 @@
             padding: 0px;
             margin: 0px;
             font-size: 14px;
+            font-style: italic;
         }
         
         #fuel {
@@ -86,22 +94,24 @@
             text-align: center;
             border-radius: 14px;
             font-size: 20px;
+            font-style: italic;
         }
         
         #fuel:hover {
-            background-color: coral;
+            background-color: grey;
         }
         
         #research {
-            width: 99px;
+            width: 200px;
             height: 43px;
             text-align: center;
             border-radius: 14px;
             font-size: 18px;
+            font-style: italic;
         }
         
         #research:hover {
-            background-color: coral;
+            background-color: grey;
         }
         
         #resea {
@@ -110,18 +120,21 @@
             text-align: center;
             border-radius: 14px;
             font-size: 18px;
+            font-style: italic;
         }
         
         #resea:hover {
-            background-color: coral;
+            background-color: grey;
         }
         
         #sub {
-            width: 120px;
+            width: 200px;
             height: 43px;
             text-align: center;
             border-radius: 14px;
             font-size: 18px;
+            font-style: italic;
+            
         }
         
         #sub:hover {
