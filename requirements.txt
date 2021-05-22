@@ -23,7 +23,6 @@ scipy==1.6.3
 seaborn==0.11.1
 six==1.16.0
 sklearn==0.0
--e git+https://github.com/explosion/spaCy@1e3a326e5362eee73b0b7dacb89994a2507390b7#egg=spacy
 thinc-gpu-ops==0.0.4
 threadpoolctl==2.1.0
 urllib3==1.26.4
